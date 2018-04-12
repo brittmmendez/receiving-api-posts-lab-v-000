@@ -2096,3 +2096,22 @@ Processing by ProductsController#create as */*
 [active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 35]]
 [active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (2.04ms)
 Completed 201 Created in 26ms (Views: 18.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/products/new" for 69.133.193.210 at 2018-04-12 17:00:44 +0000
+Cannot render console from 69.133.193.210! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 69.133.193.210 at 2018-04-12 17:00:47 +0000
+Cannot render console from 69.133.193.210! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gyWwX1UM8pi3knUyJ+PRNT4kwc5e5nUPMZXmgvgGhruDS6LETGv6d4sxgFk/J2CO8E8kQrGJtVE7r6z4mKKc1g==", "product"=>{"name"=>"zxczcxcx", "price"=>"czx", "description"=>"", "inventory"=>""}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "zxczcxcx"], ["description", ""], ["price", 0], ["created_at", "2018-04-12 17:00:47.308486"], ["updated_at", "2018-04-12 17:00:47.308486"]]
+  [1m[35m (89.4ms)[0m  commit transaction
+[active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 36]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (1.81ms)
+Completed 201 Created in 96ms (Views: 2.3ms | ActiveRecord: 90.4ms)
